@@ -1,0 +1,78 @@
+.bg-1{
+    background-image: url('https://img.freepik.com/free-photo/man-meditating-holding-hands-mudra-gesture-class_1262-20268.jpg?w=740&t=st=1686072943~exp=1686073543~hmac=89990e7cafc087a41bb14345cccf9e643fc54dd1a128022a8ffff60e91eeffab'),linear-gradient(to right, #870000, #190a05);
+  
+    background-blend-mode: overlay;
+    background-size: 100% 100%;
+    height: 400px;
+    
+}
+.bg-2{
+    background-image: url('https://images.pexels.com/photos/13974932/pexels-photo-13974932.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),linear-gradient(to right, #870000, #190a05);
+    background-blend-mode: overlay;
+    background-size: 100% 100%;
+    height: 400px;
+    
+}
+.bg-3{
+    background-image: url('https://images.pexels.com/photos/6787357/pexels-photo-6787357.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),linear-gradient(to right, #870000, #190a05);
+    background-blend-mode: overlay;
+    background-size: 100% 100%;
+    height: 400px;
+    
+}
+.bg-4{
+    background-image: url('https://images.pexels.com/photos/999309/pexels-photo-999309.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),linear-gradient(to right, #870000, #190a05);
+    background-size: 100% 100%;
+    background-blend-mode: overlay;
+    height: 400px;
+}
+.slider-text1 {
+    animation-name: slideInFromLeft;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+  }
+.slider-text2 {
+    animation-name: slideInFromRight;
+    animation-duration: .7s;
+    animation-delay: .7s;
+    animation-fill-mode: both;
+  }
+.slider-text3 {
+    animation-name: slideInFromTop;
+    animation-duration: .4s;
+    animation-delay: .4s;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slideInFromRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slideInFromTop {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
