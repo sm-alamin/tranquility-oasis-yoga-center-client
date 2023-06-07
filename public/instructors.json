@@ -1,0 +1,83 @@
+[
+    {
+      "id": 1,
+      "instructor_name": "John Doe",
+      "instructor_email": "john.doe@example.com",
+      "instructor_photo": "https://randomuser.me/api/portraits/men/1.jpg",
+      "total_students": 50,
+      "yoga_type": "Hatha Yoga"
+    },
+    {
+      "id": 2,
+      "instructor_name": "Jane Smith",
+      "instructor_email": "jane.smith@example.com",
+      "instructor_photo": "https://randomuser.me/api/portraits/women/2.jpg",
+      "total_students": 65,
+      "yoga_type": "Vinyasa Yoga"
+    },
+    {
+      "id": 3,
+      "instructor_name": "Michael Johnson",
+      "instructor_email": "michael.johnson@example.com",
+      "instructor_photo": "https://randomuser.me/api/portraits/men/3.jpg",
+      "total_students": 75,
+      "yoga_type": "Ashtanga Yoga"
+    },
+    {
+      "id": 4,
+      "instructor_name": "Emily Davis",
+      "instructor_email": "emily.davis@example.com",
+      "instructor_photo": "https://randomuser.me/api/portraits/women/4.jpg",
+      "total_students": 42,
+      "yoga_type": "Bikram Yoga"
+    },
+    {
+      "id": 5,
+      "instructor_name": "Daniel Wilson",
+      "instructor_email": "daniel.wilson@example.com",
+      "instructor_photo": "https://randomuser.me/api/portraits/men/5.jpg",
+      "total_students": 58,
+      "yoga_type": "Kundalini Yoga"
+    },
+    {
+      "id": 6,
+      "instructor_name": "Olivia Anderson",
+      "instructor_email": "olivia.anderson@example.com",
+      "instructor_photo": "https://randomuser.me/api/portraits/women/6.jpg",
+      "total_students": 80,
+      "yoga_type": "Yin Yoga"
+    },
+    {
+      "id": 7,
+      "instructor_name": "David Martinez",
+      "instructor_email": "david.martinez@example.com",
+      "instructor_photo": "https://randomuser.me/api/portraits/men/7.jpg",
+      "total_students": 93,
+      "yoga_type": "Power Yoga"
+    },
+    {
+      "id": 8,
+      "instructor_name": "Sophia Lee",
+      "instructor_email": "sophia.lee@example.com",
+      "instructor_photo": "https://randomuser.me/api/portraits/women/8.jpg",
+      "total_students": 67,
+      "yoga_type": "Restorative Yoga"
+    },
+    {
+      "id": 9,
+      "instructor_name": "Christopher Thompson",
+      "instructor_email": "christopher.thompson@example.com",
+      "instructor_photo": "https://randomuser.me/api/portraits/men/9.jpg",
+      "total_students": 52,
+      "yoga_type": "Iyengar Yoga"
+    },
+    {
+      "id": 10,
+      "instructor_name": "Emma Harris",
+      "instructor_email": "emma.harris@example.com",
+      "instructor_photo": "https://randomuser.me/api/portraits/women/10.jpg",
+      "total_students": 70,
+      "yoga_type": "Acro Yoga"
+    }
+  ]
+  
