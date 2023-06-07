@@ -14,7 +14,7 @@ const Navbar = () => {
         <Link to="/classes">Classes</Link>
       </li>
       <li className="border-b-2">
-        <Link to="/contact">About Us</Link>
+        <Link to="/about-us">About Us</Link>
       </li>
     </>
   );
@@ -54,7 +54,7 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end z-10">
-      <Link className="btn">Login</Link>
+      <Link to='/login' className="btn">Login</Link>
         <div className="dropdown dropdown-end">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
