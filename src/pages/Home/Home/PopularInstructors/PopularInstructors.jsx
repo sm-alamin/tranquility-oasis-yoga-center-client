@@ -4,12 +4,12 @@ import SectionHeader from "../../../../components/SectionHeader/SectionHeader";
 
 
 const PopularInstructors = () => {
-  const [instructors, setInstructors] = useState([]);
+  const [popularInstructors, setPopularInstructors] = useState([]);
   useEffect(() => {
     fetch("instructors.json")
       .then((res) => res.json())
       .then((data) => {
-        setInstructors(data);
+        setPopularInstructors(data);
       });
   }, []);
   return (
@@ -21,8 +21,8 @@ const PopularInstructors = () => {
         />
       </div>
 
-      <div className="grid grid-cols-3 gap-3">
-        {instructors.map((instructor) => (
+      <div className="grid grid-cols-4 gap-3">
+        {popularInstructors.map((instructor) => (
           <SinglePopularInstructor key={instructor.id} instructor={instructor} />
         ))}
       </div>

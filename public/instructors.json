@@ -3,7 +3,7 @@
       "id": 1,
       "instructor_name": "John Doe",
       "instructor_email": "john.doe@example.com",
-      "instructor_photo": "https://randomuser.me/api/portraits/men/1.jpg",
+      "instructor_photo": "https://yogastudio.ancorathemes.com/wp-content/uploads/2015/11/roberta-smart-390x390.jpg",
       "total_students": 50,
       "yoga_type": "Hatha Yoga"
     },
@@ -11,7 +11,7 @@
       "id": 2,
       "instructor_name": "Jane Smith",
       "instructor_email": "jane.smith@example.com",
-      "instructor_photo": "https://randomuser.me/api/portraits/women/2.jpg",
+      "instructor_photo": "https://yogastudio.ancorathemes.com/wp-content/uploads/2015/11/vicky-lewis-390x390.jpg",
       "total_students": 65,
       "yoga_type": "Vinyasa Yoga"
     },
@@ -19,7 +19,7 @@
       "id": 3,
       "instructor_name": "Michael Johnson",
       "instructor_email": "michael.johnson@example.com",
-      "instructor_photo": "https://randomuser.me/api/portraits/men/3.jpg",
+      "instructor_photo": "https://yogastudio.ancorathemes.com/wp-content/uploads/2015/11/miranda-roberts-390x390.jpg",
       "total_students": 75,
       "yoga_type": "Ashtanga Yoga"
     },
@@ -27,7 +27,7 @@
       "id": 4,
       "instructor_name": "Emily Davis",
       "instructor_email": "emily.davis@example.com",
-      "instructor_photo": "https://randomuser.me/api/portraits/women/4.jpg",
+      "instructor_photo": "https://yogastudio.ancorathemes.com/wp-content/uploads/2015/11/marta-kerr.jpg",
       "total_students": 42,
       "yoga_type": "Bikram Yoga"
     },
