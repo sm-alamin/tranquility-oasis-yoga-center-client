@@ -1,0 +1,16 @@
+
+  
+.input-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-icon .icon {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
