@@ -4,11 +4,17 @@ const Navbar = () => {
   const navItems = (
     <>
       <li className="border-b-2">
-        <Link>Home</Link>
+        <Link to="/">Home</Link>
       </li>
 
       <li className="border-b-2">
-        <Link>About</Link>
+        <Link to="/instructors">Instructors</Link>
+      </li>
+      <li className="border-b-2">
+        <Link to="/classes">Classes</Link>
+      </li>
+      <li className="border-b-2">
+        <Link to="/contact">About Us</Link>
       </li>
     </>
   );
@@ -39,13 +45,34 @@ const Navbar = () => {
             {navItems}
           </ul>
         </div>
-        <Link to='/' className="btn btn-ghost normal-case text-xl">Tranquility Oasis Yoga Center</Link>
+        <Link to="/" className="btn btn-ghost normal-case text-xl">
+          Tranquility Oasis Yoga Center
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1  space-x-3">{navItems}</ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Login</a>
+
+      <div className="navbar-end z-10">
+      <Link className="btn">Login</Link>
+        <div className="dropdown dropdown-end">
+          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+            <div className="w-10 rounded-full">
+              <img src="https://picsum.photos/200/300" alt="User Avatar" />
+            </div>
+          </label>
+          <ul className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+            <li>
+              <a href="#">Dashboard</a>
+            </li>
+            <li>
+              <a href="#">Settings</a>
+            </li>
+            <li>
+              <a href="#">Logout</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
