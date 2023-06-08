@@ -1,6 +1,6 @@
 [
     {
-      "id": 1,
+      
       "image": "https://yogastudio.ancorathemes.com/wp-content/uploads/2015/11/Depositphotos_6752033_original-scaled.jpg",
       "class_name": "Yoga Flow",
       "instructor_name": "John Doe",
@@ -9,7 +9,7 @@
       "price": 20
     },
     {
-      "id": 2,
+     
       "image": "https://source.unsplash.com/random/2",
       "class_name": "Hatha Yoga",
       "instructor_name": "Jane Smith",
@@ -18,7 +18,7 @@
       "price": 15
     },
     {
-      "id": 3,
+     
       "image": "https://source.unsplash.com/random/3",
       "class_name": "Power Yoga",
       "instructor_name": "Mike Johnson",
@@ -27,7 +27,7 @@
       "price": 25
     },
     {
-      "id": 4,
+      
       "image": "https://source.unsplash.com/random/4",
       "class_name": "Vinyasa Flow",
       "instructor_name": "Emily Brown",
@@ -36,7 +36,7 @@
       "price": 18
     },
     {
-      "id": 5,
+      
       "image": "https://source.unsplash.com/random/5",
       "class_name": "Restorative Yoga",
       "instructor_name": "David Wilson",
@@ -45,7 +45,7 @@
       "price": 20
     },
     {
-      "id": 6,
+      
       "image": "https://source.unsplash.com/random/6",
       "class_name": "Yin Yoga",
       "instructor_name": "Sarah Thompson",
@@ -54,7 +54,7 @@
       "price": 15
     },
     {
-      "id": 7,
+    
       "image": "https://source.unsplash.com/random/7",
       "class_name": "Ashtanga Yoga",
       "instructor_name": "Michael Davis",
@@ -63,7 +63,7 @@
       "price": 25
     },
     {
-      "id": 8,
+      
       "image": "https://source.unsplash.com/random/8",
       "class_name": "Kundalini Yoga",
       "instructor_name": "Sophia Anderson",
@@ -72,7 +72,7 @@
       "price": 20
     },
     {
-      "id": 9,
+     
       "image": "https://source.unsplash.com/random/9",
       "class_name": "Iyengar Yoga",
       "instructor_name": "Robert Turner",
@@ -81,7 +81,7 @@
       "price": 18
     },
     {
-      "id": 10,
+      
       "image": "https://source.unsplash.com/random/10",
       "class_name": "Bikram Yoga",
       "instructor_name": "Olivia White",

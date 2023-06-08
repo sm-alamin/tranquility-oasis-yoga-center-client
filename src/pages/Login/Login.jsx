@@ -1,12 +1,14 @@
 import { useContext } from "react";
 import "./Login.css";
 import { AuthContext } from "../../providers/AuthProvider";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {BsGoogle} from 'react-icons/bs'
 import { toast } from "react-hot-toast";
 const Login = () => {
     const {signIn, signInWithGoogle} = useContext(AuthContext);
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/'
 
 
 
@@ -23,7 +25,7 @@ const Login = () => {
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
-        navigate('/')
+        navigate(from, {replace:true})
         
       })
       .catch((error) => {
@@ -36,12 +38,13 @@ const Login = () => {
     signInWithGoogle()
       .then((result) => {
         console.log(result.user);
-        // navigate(from, {replace:true})
         toast.success("success")
+        navigate(from, {replace:true})
       })
       .catch((error) => {
         toast.error(error.message)
       });
+     
   };
   return (
     <div className="login-container">

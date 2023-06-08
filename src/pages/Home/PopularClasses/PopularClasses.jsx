@@ -5,7 +5,7 @@ import SingleCourse from "./SingleCourse";
 const PopularClasses = () => {
   const [courses, setCourses] = useState([]);
   useEffect(() => {
-    fetch("courses.json")
+    fetch("http://localhost:5000/courses?limit=6")
       .then((res) => res.json())
       .then((data) => {
         setCourses(data);

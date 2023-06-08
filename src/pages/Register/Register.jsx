@@ -35,7 +35,9 @@ const Register = () => {
           logOut();
           navigate("/login");
         })
-        .catch((error) => console.log(error));
+        .catch((err) => {
+          toast.error(err.message)
+        });
     });
   };
 
