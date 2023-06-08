@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import SectionHeader from "../../../components/SectionHeader/SectionHeader";
-import SingleCourse from "./SingleCourse";
+import SinglePopularCourse from "./SinglePopularCourse";
+
 
 const PopularClasses = () => {
   const [courses, setCourses] = useState([]);
@@ -22,7 +23,7 @@ const PopularClasses = () => {
 
       <div className="grid grid-cols-3 gap-3">
         {courses.map((course) => (
-          <SingleCourse key={course.id} course={course} />
+          <SinglePopularCourse key={course._id} course={course} />
         ))}
       </div>
     </>

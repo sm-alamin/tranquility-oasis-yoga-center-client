@@ -2,7 +2,7 @@ import ProgressBar from "@ramonak/react-progress-bar";
 
 
 const SingleInstructor = ({instructor}) => {
-    const {id, instructor_name, instructor_email, instructor_position, instructor_photo} = instructor;
+    const {_id, instructor_name, instructor_email, instructor_position, instructor_photo} = instructor;
     return (
         <div>
                 <img src={instructor_photo} alt="" className="w-full h-96"/>

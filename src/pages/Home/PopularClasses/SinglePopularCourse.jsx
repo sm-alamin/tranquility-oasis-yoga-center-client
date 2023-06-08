@@ -1,5 +1,5 @@
-const SingleCourse = ({ course }) => {
-  const { id, course_name, course_photo,instructor_name, number_of_enrolled_students } = course;
+const SinglePopularCourse = ({ course }) => {
+  const { _id, course_name, course_photo,instructor_name, number_of_enrolled_students } = course;
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
       <img
@@ -20,4 +20,4 @@ const SingleCourse = ({ course }) => {
   );
 };
 
-export default SingleCourse;
+export default SinglePopularCourse;

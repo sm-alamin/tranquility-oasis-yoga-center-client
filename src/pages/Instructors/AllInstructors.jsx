@@ -6,7 +6,7 @@ import SingleInstructor from "./SingleInstructor";
 const AllInstructors = () => {
     const [instructors, setInstructors] = useState([])
     useEffect(() => {
-        fetch("instructors.json")
+        fetch("http://localhost:5000/instructors")
           .then((res) => res.json())
           .then((data) => {
             setInstructors(data);
@@ -23,11 +23,8 @@ const AllInstructors = () => {
 
       <div className="grid grid-cols-3 gap-5">
         {instructors.map((instructor) => (
-          <SingleInstructor key={instructor.id} instructor={instructor} />
+          <SingleInstructor key={instructor._id} instructor={instructor} />
         ))}
-      </div>
-      <div className="text-center pb-5">
-      <button className="btn btn-secondary w-36">Show All Instructors</button>
       </div>
     </>
     );
