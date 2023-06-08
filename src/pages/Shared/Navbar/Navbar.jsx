@@ -1,9 +1,12 @@
 import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { Link } from "react-router-dom";
+import useCart from "../../../hooks/useCart";
+import { MdOutlineShoppingBasket } from 'react-icons/md';
 
 const Navbar = () => {
   const {user, logOut} = useContext(AuthContext);
+  const [cart] = useCart();
 
   const handleLogOut = () => {
     logOut()
@@ -66,6 +69,16 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end z-10">
+      
+            <Link to="/" className="mr-3">
+              
+                <button className="btn gap-2">
+                <MdOutlineShoppingBasket/>
+                    <div className="badge badge-secondary">+{cart?.length || 0}</div>
+                </button>
+            </Link>
+        
+        
         {
           !user ? <Link to='/login' className="btn">Login</Link> 
           : <div className="dropdown dropdown-end">
