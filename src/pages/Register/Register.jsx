@@ -6,6 +6,7 @@ import { RiEyeFill, RiEyeOffFill } from "react-icons/ri";
 import "./Register.css";
 import { toast } from "react-hot-toast";
 import Swal from "sweetalert2";
+import SocialLogin from "../../components/SocialLogin/SocialLogin";
 
 const Register = () => {
   const {
@@ -57,7 +58,7 @@ const Register = () => {
   return (
     <>
       <div className="login-container">
-        <section className="form-container">
+        <section className="form-container flex flex-col">
           <form onSubmit={handleSubmit(onSubmit)} className="card-body">
             <h1 className="">Register</h1>
             <div className="flex gap-2">
@@ -189,6 +190,7 @@ const Register = () => {
               />
             </div>
           </form>
+          <SocialLogin />
         </section>
       </div>
     </>

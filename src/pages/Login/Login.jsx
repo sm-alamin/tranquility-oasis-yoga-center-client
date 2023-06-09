@@ -4,6 +4,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import {BsGoogle} from 'react-icons/bs'
 import { toast } from "react-hot-toast";
+import SocialLogin from "../../components/SocialLogin/SocialLogin";
 const Login = () => {
     const {signIn, signInWithGoogle} = useContext(AuthContext);
     const navigate = useNavigate();
@@ -32,20 +33,8 @@ const Login = () => {
         toast.error(error.message)
       });
   };
-
-  //Google login
-  const handleGoogleLogin = () => {
-    signInWithGoogle()
-      .then((result) => {
-        console.log(result.user);
-        toast.success("success")
-        navigate(from, {replace:true})
-      })
-      .catch((error) => {
-        toast.error(error.message)
-      });
      
-  };
+
   return (
     <div className="login-container">
       <section>
@@ -68,15 +57,7 @@ const Login = () => {
             </label>
           </div>
           <button type="submit" className="btn btn-secondary">Log in</button>
-          <div className="flex justify-center mt-6">
-            <p className="text-gray-600">
-              <button onClick={handleGoogleLogin} className="btn btn-circle">
-                <div className="">
-                <BsGoogle />
-                </div>
-              </button>
-            </p>
-          </div>
+          <SocialLogin />
           <div className="register">
             <p>
               Don't have a account <Link to='/register'>Register</Link>
