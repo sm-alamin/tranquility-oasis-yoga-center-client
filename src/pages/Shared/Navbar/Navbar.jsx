@@ -2,20 +2,20 @@ import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { Link } from "react-router-dom";
 import useCart from "../../../hooks/useCart";
-import { MdOutlineShoppingBasket } from 'react-icons/md';
+import { MdOutlineShoppingBasket } from "react-icons/md";
+
 
 const Navbar = () => {
-  const {user, logOut} = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
   const [cart] = useCart();
 
   const handleLogOut = () => {
     logOut()
-    .then()
-    .catch(err=> {
-      console.log(err.message)
-    })
-    
-  }
+      .then()
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
   const navItems = (
     <>
       <li className="border-b-2">
@@ -69,40 +69,45 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end z-10">
-      
-            <Link to="/dashboard/my-cart" className="mr-3">
-              
-                <button className="btn gap-2">
-                <MdOutlineShoppingBasket/>
-                    <div className="badge badge-secondary">+{cart?.length || 0}</div>
-                </button>
-            </Link>
-        
-        
-        {
-          !user ? <Link to='/login' className="btn">Login</Link> 
-          : <div className="dropdown dropdown-end">
-          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-            <div className="w-10 rounded-full">
-              <img src={user?.photoURL} alt="User Avatar" />
-            </div>
-          </label>
-          <ul className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-            <li>
-              <Link to='/dashboard'>Dashboard</Link>
-            </li>
-            <li>
-              <Link to=''>Settings</Link>
-            </li>
-            <li>
-              <Link onClick={handleLogOut}>Logout</Link>
-            </li>
-          </ul>
-        </div>
-        }
-      
-        
+        <Link to="/dashboard/my-cart" className="mr-3">
+          <button className="btn gap-2">
+            <MdOutlineShoppingBasket />
+            <div className="badge badge-secondary">+{cart?.length || 0}</div>
+          </button>
+        </Link>
+
+        {!user ? (
+          <Link to="/login" className="btn">
+            Login
+          </Link>
+        ) : (
+          <div className="dropdown dropdown-end">
+            <label tabIndex={0} className="btn btn-ghost btn-circle avatar"
+            data-tooltip-id="my-tooltip"
+            data-tooltip-content={user.displayName}
+            >
+              <div className="w-10 rounded-full">
+                <img
+                  src={user?.photoURL}
+                  alt="User Avatar"
+                />
+              </div>
+            </label>
+            <ul className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+              <li>
+                <Link to="/dashboard">Dashboard</Link>
+              </li>
+              <li>
+                <Link to="">Settings</Link>
+              </li>
+              <li>
+                <Link onClick={handleLogOut}>Logout</Link>
+              </li>
+            </ul>
+          </div>
+        )}
       </div>
+      
     </div>
   );
 };
