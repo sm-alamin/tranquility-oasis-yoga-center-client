@@ -70,7 +70,7 @@ const Navbar = () => {
 
       <div className="navbar-end z-10">
       
-            <Link to="/" className="mr-3">
+            <Link to="/dashboard/my-cart" className="mr-3">
               
                 <button className="btn gap-2">
                 <MdOutlineShoppingBasket/>
@@ -89,7 +89,7 @@ const Navbar = () => {
           </label>
           <ul className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
             <li>
-              <Link to=''>Dashboard</Link>
+              <Link to='/dashboard'>Dashboard</Link>
             </li>
             <li>
               <Link to=''>Settings</Link>
