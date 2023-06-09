@@ -1,10 +1,11 @@
 import { NavLink, Outlet } from "react-router-dom";
-import { FaShoppingCart, FaWallet, FaCalendarAlt, FaHome } from 'react-icons/fa';
+import { FaShoppingCart, FaWallet, FaCalendarAlt, FaHome, FaUtensils, FaBook, FaUsers } from 'react-icons/fa';
 import useCart from "../hooks/useCart";
 
 
 const Dashboard = () => {
     const [cart] = useCart();
+    const isAdmin = true;
     return (
         <div className="drawer lg:drawer-open">
   <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -18,15 +19,27 @@ const Dashboard = () => {
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-80">
 
-                    <li><NavLink to="/dashboard/home"><FaHome></FaHome> User Home</NavLink></li>
-                    <li><NavLink to="/dashboard/my-enrolled-classes"><FaCalendarAlt></FaCalendarAlt> My Enrolled Classes</NavLink></li>
-                    <li><NavLink to="/dashboard/history"><FaWallet></FaWallet> Payment History</NavLink></li>
-                    <li>
-                        <NavLink to="/dashboard/my-cart"><FaShoppingCart></FaShoppingCart> My Selected Classes
-                            <span className="badge inl badge-secondary">+{cart?.length || 0}</span>
-                        </NavLink>
+                    {/* changeable menu according to the role */}
+                    {
+                        isAdmin ? <>
+                            <li><NavLink to="/dashboard/home"><FaHome></FaHome> Admin Home</NavLink></li>
+                            <li><NavLink to="/dashboard/manage-classes"><FaWallet></FaWallet> Manage Classes</NavLink></li>
+                            <li><NavLink to="/dashboard/manage-booking"><FaBook></FaBook> Manage Bookings</NavLink></li>
+                            <li><NavLink to="/dashboard/all-users"><FaUsers></FaUsers> Manage Users</NavLink></li>
+                            
+                        </> : <>
+                            <li><NavLink to="/dashboard/home"><FaHome></FaHome> User Home</NavLink></li>
+                            <li><NavLink to="/dashboard/reservations"><FaCalendarAlt></FaCalendarAlt> Reservations</NavLink></li>
+                            <li><NavLink to="/dashboard/history"><FaWallet></FaWallet> Payment History</NavLink></li>
+                            <li>
+                                <NavLink to="/dashboard/mycart"><FaShoppingCart></FaShoppingCart> My Cart
+                                    <span className="badge inl badge-secondary">+{cart?.length || 0}</span>
+                                </NavLink>
 
-                    </li>
+                            </li>
+                        </>
+                    }
+                    {/* common for all role */}
                     <div className="divider"></div>
                     <li><NavLink to="/"><FaHome></FaHome> Home</NavLink> </li>
                     <li><NavLink to="/classes"> Our Classes</NavLink></li>

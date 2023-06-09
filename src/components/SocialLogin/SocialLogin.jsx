@@ -1,12 +1,11 @@
-import { useContext } from "react";
 
 import { useLocation, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../providers/AuthProvider";
 import { BsGoogle } from "react-icons/bs";
+import useAuth from "../../hooks/useAuth";
 
 
 const SocialLogin = () => {
-    const { signInWithGoogle } = useContext(AuthContext);
+    const { signInWithGoogle } = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
 

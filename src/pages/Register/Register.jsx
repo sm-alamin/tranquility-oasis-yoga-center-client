@@ -1,12 +1,12 @@
-import { useContext, useState } from "react";
+
 import { useForm } from "react-hook-form";
-import { AuthContext } from "../../providers/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 import { RiEyeFill, RiEyeOffFill } from "react-icons/ri";
 import "./Register.css";
 import { toast } from "react-hot-toast";
-import Swal from "sweetalert2";
 import SocialLogin from "../../components/SocialLogin/SocialLogin";
+import useAuth from "../../hooks/useAuth";
+import { useState } from "react";
 
 const Register = () => {
   const {
@@ -15,7 +15,7 @@ const Register = () => {
     reset,
     formState: { errors },
   } = useForm();
-  const { createUser, updateUserProfile, logOut } = useContext(AuthContext);
+  const { createUser, updateUserProfile, logOut } = useAuth();
   const navigate = useNavigate();
 
   const [showPassword, setShowPassword] = useState(false);

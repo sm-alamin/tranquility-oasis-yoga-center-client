@@ -1,12 +1,11 @@
-import { useContext } from "react";
+
 import "./Login.css";
-import { AuthContext } from "../../providers/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import {BsGoogle} from 'react-icons/bs'
 import { toast } from "react-hot-toast";
 import SocialLogin from "../../components/SocialLogin/SocialLogin";
+import useAuth from "../../hooks/useAuth";
 const Login = () => {
-    const {signIn, signInWithGoogle} = useContext(AuthContext);
+    const {signIn,} = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/'
