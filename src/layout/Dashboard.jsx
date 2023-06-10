@@ -69,8 +69,8 @@ const Dashboard = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/dashboard/manage-schedule">
-                    <FaCalendarAlt /> Manage Classes
+                  <NavLink to="/dashboard/manage-class">
+                    <FaCalendarAlt /> All Classes
                   </NavLink>
                 </li>
                 {/* Add more instructor-specific menu items */}

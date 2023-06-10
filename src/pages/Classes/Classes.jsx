@@ -1,18 +1,19 @@
-import { useEffect, useState } from "react";
+
 import SectionHeader from "../../components/SectionHeader/SectionHeader";
+import useClasses from "../../hooks/useClasses";
 import SingleClass from "./SingleClass";
 
 const Classes = () => {
-    const [classes, setClasses] = useState([]);
+    const [classes] = useClasses();
 
-    useEffect(() => {
-        fetch('http://localhost:5000/courses')
-            .then(res => res.json())
-            .then(data => {
-                setClasses(data);
-                console.log(data)
-            });
-    }, []);
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/courses')
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             setClasses(data);
+    //             console.log(data)
+    //         });
+    // }, []);
 
     return (
         <div>
