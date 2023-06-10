@@ -12,6 +12,7 @@ import AllUsers from "../pages/Dashboard/AllUsers/Allusers";
 import AddClass from "../pages/Dashboard/Instructor/AddClass/AddClass";
 import InstructorRoute from "./InstructorRoute";
 import AllClasses from "../pages/Dashboard/Instructor/AllClasses/AllClasses";
+import UpdateClass from "../pages/Dashboard/Instructor/AddClass/UpdateClass";
 
 
 
@@ -62,7 +63,11 @@ const router = createBrowserRouter([
       {
         path: 'manage-class', 
         element: <InstructorRoute><AllClasses /></InstructorRoute>
-      }
+      },
+      {
+        path: 'manage-class/:id', 
+        element: <InstructorRoute><UpdateClass /></InstructorRoute>
+      },
     ]
   }
 ]);
