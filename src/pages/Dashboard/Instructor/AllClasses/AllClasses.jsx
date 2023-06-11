@@ -55,7 +55,7 @@ const AllClasses = () => {
                 </td>
                 <td>
                   <Link
-                    to={`${class_item._id}`}
+                    to={`/dashboard/update-classes/${class_item._id}`}
                     className="btn btn-ghost w-16 bg-green-300  text-white"
                   >
                     <FaEdit />

@@ -6,13 +6,18 @@ import Register from "../pages/Register/Register";
 import AllInstructors from "../pages/Instructors/AllInstructors";
 import Classes from "../pages/Classes/Classes";
 import Dashboard from "../layout/Dashboard";
-import MyCart from "../pages/Dashboard/MyCart/MyCart";
+import MyCart from "../pages/Dashboard/Student/MyCart/MyCart";
 import PrivateRoute from "./PrivateRoute";
-import AllUsers from "../pages/Dashboard/AllUsers/Allusers";
 import AddClass from "../pages/Dashboard/Instructor/AddClass/AddClass";
 import InstructorRoute from "./InstructorRoute";
 import AllClasses from "../pages/Dashboard/Instructor/AllClasses/AllClasses";
 import UpdateClass from "../pages/Dashboard/Instructor/AddClass/UpdateClass";
+import AllUsers from "../pages/Dashboard/Admin/AllUsers/Allusers";
+import AdminRoute from "./AdminRoute";
+import ManageClasses from "../pages/Dashboard/Admin/ManageClasses/ManageClasses";
+import Payment from "../pages/Dashboard/Student/Payment/Payment";
+
+
 
 
 
@@ -53,21 +58,32 @@ const router = createBrowserRouter([
         element: <MyCart/>,
       },
       {
+        path: 'payment', 
+        element: <Payment/>,
+      },
+      
+      {
         path: 'all-users', 
-        element: <AllUsers />
+        element: <AdminRoute><AllUsers /></AdminRoute>,
+      },
+      {
+        path: 'manage-classes', 
+        element: <AdminRoute><ManageClasses /></AdminRoute>
       },
       {
         path: 'add-class', 
         element: <InstructorRoute><AddClass /></InstructorRoute>
       },
       {
-        path: 'manage-class', 
+        path: 'all-classes', 
         element: <InstructorRoute><AllClasses /></InstructorRoute>
       },
       {
-        path: 'manage-class/:id', 
+        path: 'update-classes/:id', 
         element: <InstructorRoute><UpdateClass /></InstructorRoute>
       },
+
+      
     ]
   }
 ]);

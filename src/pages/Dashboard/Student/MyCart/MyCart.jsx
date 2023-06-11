@@ -1,6 +1,8 @@
 import { FaTrashAlt } from "react-icons/fa";
-import useCart from "../../../hooks/useCart";
+
 import Swal from "sweetalert2";
+import useCart from "../../../../hooks/useCart";
+import { Link } from "react-router-dom";
 
 const MyCart = () => {
   const [cart, refetch] = useCart();
@@ -37,7 +39,7 @@ const MyCart = () => {
       <div className="grid grid-cols-3 gap-2 pb-2 px-2">
         <h3 className="text-3xl">Total Items: {cart.length}</h3>
         <h3 className="text-3xl">Total Price: ${total}</h3>
-        <button className="btn btn-warning btn-sm">PAY</button>
+        <Link to='/dashboard/payment' className="btn btn-warning btn-sm">PAY</Link>
       </div>
       <div className="overflow-x-auto w-full">
         <table className="table w-full">

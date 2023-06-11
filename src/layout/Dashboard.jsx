@@ -68,8 +68,9 @@ const Dashboard = () => {
                     <FaBook /> Add a Class
                   </NavLink>
                 </li>
+               
                 <li>
-                  <NavLink to="/dashboard/manage-class">
+                  <NavLink to="/dashboard/all-classes">
                     <FaCalendarAlt /> All Classes
                   </NavLink>
                 </li>
