@@ -6,6 +6,7 @@ import { RiHeartPulseLine } from "react-icons/ri";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { JackInTheBox, Slide,Roll, Fade } from "react-awesome-reveal";
 
 const Benifit = () => {
     useEffect(() => {
@@ -30,27 +31,27 @@ const Benifit = () => {
         <div className="flex flex-col gap-5">
         <div className="flex justify-between items-center gap-2">
           <div>
-            <h3 className="text-custom">Good for Health</h3>
-            <p className="text-slate-400">
+            <JackInTheBox><h3 className="text-custom">Good for Health</h3></JackInTheBox>
+            <Slide><p className="text-slate-400">
               Yoga Fit is where you can find balance, harmony and energy. Yoga
               Fit is where you can find balance, harmony and energy.
-            </p>
+            </p></Slide>
           </div>
-         <div className="w-16 h-16 border rounded-s-full bg-custom">
+         <Fade><div className="w-16 h-16 border rounded-s-full bg-custom">
          <GrYoga className="text-3xl mt-4 text-indigo-600"/>
-         </div>
+         </div></Fade>
         </div>
         <div className="flex justify-between items-center gap-2">
           <div>
-            <h3 className="text-custom">Good for Body</h3>
-            <p className="text-slate-400">
+           <JackInTheBox> <h3 className="text-custom">Good for Body</h3></JackInTheBox>
+           <Slide> <p className="text-slate-400">
               Yoga Fit is where you can find balance, harmony and energy. Yoga
               Fit is where you can find balance, harmony and energy.
-            </p>
+            </p></Slide>
           </div>
-         <div className="w-16 h-16 border rounded-s-full bg-custom">
+         <Fade><div className="w-16 h-16 border rounded-s-full bg-custom">
          <BiBody className="text-3xl mt-4 text-indigo-600"/>
-         </div>
+         </div></Fade>
         </div>
         </div>
 
@@ -61,27 +62,27 @@ const Benifit = () => {
         <div className="flex flex-col gap-5">
         <div className="flex justify-between items-center gap-2">
           <div>
-            <h3 className="text-custom">Good for Cardio</h3>
-            <p className="text-slate-400">
+            <JackInTheBox><h3 className="text-custom">Good for Cardio</h3></JackInTheBox>
+            <Slide><p className="text-slate-400">
               Yoga Fit is where you can find balance, harmony and energy. Yoga
               Fit is where you can find balance, harmony and energy.
-            </p>
+            </p></Slide>
           </div>
-         <div className="w-16 h-16 border rounded-s-full bg-custom">
+        <Fade> <div className="w-16 h-16 border rounded-s-full bg-custom">
          <RiHeartPulseLine className="text-3xl mt-4 text-indigo-600"/>
-         </div>
+         </div></Fade>
         </div>
         <div className="flex justify-between items-center gap-2">
           <div>
-            <h3 className="text-custom">Good for Breathing</h3>
-            <p className="text-slate-400">
+           <JackInTheBox> <h3 className="text-custom">Good for Breathing</h3></JackInTheBox>
+            <Slide><p className="text-slate-400">
               Yoga Fit is where you can find balance, harmony and energy. Yoga
               Fit is where you can find balance, harmony and energy.
-            </p>
+            </p></Slide>
           </div>
-         <div className="w-16 h-16 border rounded-s-full bg-custom">
+        <Fade> <div className="w-16 h-16 border rounded-s-full bg-custom">
          <IoMdPulse className="text-3xl mt-4 text-indigo-600"/>
-         </div>
+         </div></Fade>
         </div>
         </div>
 

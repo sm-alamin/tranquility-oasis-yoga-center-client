@@ -16,6 +16,7 @@ import AllUsers from "../pages/Dashboard/Admin/AllUsers/Allusers";
 import AdminRoute from "./AdminRoute";
 import ManageClasses from "../pages/Dashboard/Admin/ManageClasses/ManageClasses";
 import Payment from "../pages/Dashboard/Student/Payment/Payment";
+import ErrorPage from "../pages/Error/ErrorPage";
 
 
 
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",

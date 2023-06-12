@@ -16,7 +16,7 @@ const Banner = () => {
     autoplaySpeed: 6000,
   };
   return (
-    <Slider {...settings} className="mb-20">
+    <Slider {...settings}>
       <div className="bg-1 relative"> 
         <div className="flex flex-col justify-center items-start ms-5" style={{height: '400px'}}>
            <JackInTheBox delay={2e3} cascade damping={2e-1}> <h3 className="text-7xl font-extrabold text-white">Meditation</h3></JackInTheBox>

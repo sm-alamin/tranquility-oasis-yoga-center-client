@@ -28,7 +28,7 @@ const Dashboard = () => {
           Open drawer
         </label>
       </div>
-      <div className="drawer-side bg-[#D1A054]">
+      <div className="drawer-side bg-custom">
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
         <ul className="menu p-4 w-80">
           {/* changeable menu according to the role */}

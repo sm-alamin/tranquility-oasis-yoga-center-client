@@ -1,6 +1,7 @@
+import { Slide } from "react-awesome-reveal";
 const SinglePopularInstructor = ({ instructor }) => {
   return (
-    <div className="">
+    <Slide className="">
       <div className="flex flex-col justify-center items-center">
         <img
           src={instructor.instructor_photo}
@@ -19,7 +20,7 @@ const SinglePopularInstructor = ({ instructor }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Slide>
     
   );
 };

@@ -81,7 +81,7 @@ const Footer = () => {
     </footer>
     <footer className="footer footer-center bg-slate-200 p-4 text-base-content">
     <div>
-      <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+      <p>Copyright © 2023 - All right reserved by Tranquility Osais Yoga Center</p>
     </div>
   </footer>
     </div>
