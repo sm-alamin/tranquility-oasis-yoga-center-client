@@ -27,5 +27,5 @@
     height: 400px;
 }
 .shadow-custom{
-  box-shadow: rgba(130, 240, 46, 0.4) 5px 5px, rgba(126, 238, 15, 0.3) 10px 10px, rgba(35, 172, 92, 0.2) 15px 15px, rgba(49, 169, 195, 0.1) 20px 20px, rgba(26, 114, 208, 0.05) 25px 25px;
+  box-shadow: rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1%,  rgba(35, 172, 92, 0.2) 15px 15px, rgba(49, 169, 195, 0.1) 20px 20px, rgba(26, 114, 208, 0.05) 25px 25px;
 }

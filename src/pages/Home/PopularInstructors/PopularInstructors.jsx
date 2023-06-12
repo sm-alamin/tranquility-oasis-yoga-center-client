@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import SinglePopularInstructor from "./SinglePopularInstructor";
-import SectionHeader from "../../../../components/SectionHeader/SectionHeader";
 import { Link } from "react-router-dom";
+import SectionHeader from "../../../components/SectionHeader/SectionHeader";
 
 
 const PopularInstructors = () => {
@@ -22,13 +22,13 @@ const PopularInstructors = () => {
         />
       </div>
 
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
         {popularInstructors.map((instructor) => (
           <SinglePopularInstructor key={instructor._id} instructor={instructor} />
         ))}
       </div>
       <div className="text-center pb-5">
-      <Link to='/instructors' className="btn btn-secondary w-36">Show All Instructors</Link>
+      <Link to='/instructors' className="btn bg-custom text-indigo-600 hover:bg-indigo-600 hover:text-custom border-0 w-36">Show All Instructors</Link>
       </div>
     </>
   );

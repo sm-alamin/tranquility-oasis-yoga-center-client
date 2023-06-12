@@ -42,7 +42,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-custom">
+    <div className="navbar bg-custom-navbar">
       <div className="navbar-start">
         <div className="dropdown z-10">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -68,7 +68,7 @@ const Navbar = () => {
             {navItems}
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost normal-case hidden sm:block">
+        <Link to="/" className="btn btn-ghost normal-case hidden sm:block mt-3">
           <span className="text-custom text-xs lg:text-xl">Tranquility Oasis</span> <span className="text-custom text-xs lg:text-xl">Yoga Center</span>
         </Link>
       </div>

@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div>
-        <footer className="footer p-10 bg-base-200 text-base-content">
+        <footer className="footer p-10 bg-custom text-base-content">
       <div>
         <svg
           width="50"
@@ -41,7 +41,7 @@ const Footer = () => {
         <a className="link link-hover">Cookie policy</a>
       </div>
     </footer>
-    <footer className="footer footer-center p-4 bg-base-300 text-base-content">
+    <footer className="footer footer-center bg-slate-200 p-4 text-base-content">
     <div>
       <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
     </div>

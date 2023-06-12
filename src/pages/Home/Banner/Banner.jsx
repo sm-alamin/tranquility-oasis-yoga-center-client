@@ -26,9 +26,10 @@ const Banner = () => {
            </div>
            
         </div>
-        <div className="w-56 p-3 text-indigo-600 rounded-lg bg-custom shadow-custom absolute bottom-32 right-12">
+        <div className="w-56 p-3 text-indigo-600 rounded-lg bg-custom shadow-custom absolute bottom-24 right-12 hidden lg:block">
           <img src={plantImg} alt="" className="relative -top-8 left-20"/>
           <Roll delay={2e3} cascade damping={2e-1}><p>Transform your body and mind through our Yoga Course, where you'll learn the art of harmonizing breath, movement, and intention.</p></Roll>
+          <JackInTheBox delay={3e3} cascade damping={3e-1}><button className="btn btn-ghost bg-custom">Enroll Now</button></JackInTheBox>
         </div>
       </div>
       <div className="bg-2 relative">
@@ -40,9 +41,10 @@ const Banner = () => {
            </div>
            
         </div>
-        <div className="w-56 p-3 text-indigo-600 rounded-lg bg-custom shadow-custom absolute bottom-32 left-12">
+        <div className="w-56 p-3 text-indigo-600 rounded-lg bg-custom shadow-custom absolute bottom-24 left-12 hidden lg:block ">
           <img src={plantImg} alt="" className="relative -top-8 left-20"/>
           <Roll delay={2e3} cascade damping={2e-1}><p>Transform your body and mind through our Yoga Course, where you'll learn the art of harmonizing breath, movement, and intention.</p></Roll>
+          <Roll><button className="btn btn-ghost bg-custom">Enroll Now</button></Roll>
         </div>
       </div>
       <div className="bg-3 relative">
@@ -54,9 +56,10 @@ const Banner = () => {
            </div>
            
         </div>
-        <div className="w-56 p-3 text-indigo-600 rounded-lg bg-custom shadow-custom absolute bottom-32 right-12">
+        <div className="w-56 p-3 text-indigo-600 rounded-lg bg-custom shadow-custom absolute bottom-24 right-12 hidden lg:block">
           <img src={plantImg} alt="" className="relative -top-8 left-20"/>
           <Roll delay={2e3} cascade damping={2e-1}><p>Transform your body and mind through our Yoga Course, where you'll learn the art of harmonizing breath, movement, and intention.</p></Roll>
+          <JackInTheBox delay={3e3} cascade damping={3e-1}><button className="btn btn-ghost bg-custom">Enroll Now</button></JackInTheBox>
         </div>
       </div>
       <div className="bg-4 relative">
@@ -68,9 +71,10 @@ const Banner = () => {
            </div>
            
         </div>
-        <div className="w-56 p-3 text-indigo-600 rounded-lg bg-custom shadow-custom absolute bottom-32 left-12">
+        <div className="w-56 p-3 text-indigo-600 rounded-lg bg-custom shadow-custom absolute bottom-24 left-12 hidden lg:block">
           <img src={plantImg} alt="" className="relative -top-8 left-20"/>
           <Roll delay={2e3} cascade damping={2e-1}><p>Transform your body and mind through our Yoga Course, where you'll learn the art of harmonizing breath, movement, and intention.</p></Roll>
+          <JackInTheBox delay={3e3} cascade damping={3e-1}><button className="btn btn-ghost bg-custom">Enroll Now</button></JackInTheBox>
         </div>
       </div>
      
