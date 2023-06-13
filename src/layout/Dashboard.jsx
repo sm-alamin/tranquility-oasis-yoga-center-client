@@ -10,9 +10,11 @@ import {
 import useCart from "../hooks/useCart";
 import useAdmin from "../hooks/useAdmin";
 import useInstructor from "../hooks/useInstructor";
+import useEnrolledClasses from "../hooks/useEnrolledClasses";
 
 const Dashboard = () => {
   const [cart] = useCart();
+  const [paymentCart] = useEnrolledClasses(); 
   const [isAdmin] = useAdmin();
   const [isInstructor] = useInstructor();
   return (
@@ -85,8 +87,11 @@ const Dashboard = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/dashboard/reservations">
-                  <FaCalendarAlt></FaCalendarAlt> Reservations
+                <NavLink to="/dashboard/my-enrolled-classes">
+                  <FaCalendarAlt></FaCalendarAlt> My Enrolled Classes
+                  <span className="badge inl badge-secondary">
+                    +{paymentCart?.length || 0}
+                  </span>
                 </NavLink>
               </li>
               <li>
@@ -96,7 +101,7 @@ const Dashboard = () => {
               </li>
               <li>
                 <NavLink to="/dashboard/my-cart">
-                  <FaShoppingCart></FaShoppingCart> My Cart
+                  <FaShoppingCart></FaShoppingCart> My Selected Class
                   <span className="badge inl badge-secondary">
                     +{cart?.length || 0}
                   </span>

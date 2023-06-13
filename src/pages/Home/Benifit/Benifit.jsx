@@ -38,7 +38,7 @@ const Benifit = () => {
             </p></Slide>
           </div>
          <Fade><div className="w-16 h-16 border rounded-s-full bg-custom">
-         <GrYoga className="text-3xl mt-4 text-indigo-600"/>
+         <GrYoga className="text-3xl mt-4 ms-3 text-indigo-600"/>
          </div></Fade>
         </div>
         <div className="flex justify-between items-center gap-2">
@@ -50,7 +50,7 @@ const Benifit = () => {
             </p></Slide>
           </div>
          <Fade><div className="w-16 h-16 border rounded-s-full bg-custom">
-         <BiBody className="text-3xl mt-4 text-indigo-600"/>
+         <BiBody className="text-3xl mt-4 ms-3 text-indigo-600"/>
          </div></Fade>
         </div>
         </div>
@@ -69,7 +69,7 @@ const Benifit = () => {
             </p></Slide>
           </div>
         <Fade> <div className="w-16 h-16 border rounded-s-full bg-custom">
-         <RiHeartPulseLine className="text-3xl mt-4 text-indigo-600"/>
+         <RiHeartPulseLine className="text-3xl mt-4 ms-3 text-indigo-600"/>
          </div></Fade>
         </div>
         <div className="flex justify-between items-center gap-2">
@@ -81,7 +81,7 @@ const Benifit = () => {
             </p></Slide>
           </div>
         <Fade> <div className="w-16 h-16 border rounded-s-full bg-custom">
-         <IoMdPulse className="text-3xl mt-4 text-indigo-600"/>
+         <IoMdPulse className="text-3xl mt-4 ms-3  text-indigo-600"/>
          </div></Fade>
         </div>
         </div>
