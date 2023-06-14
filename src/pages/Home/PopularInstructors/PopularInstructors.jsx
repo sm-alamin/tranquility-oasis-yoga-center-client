@@ -7,10 +7,11 @@ import SectionHeader from "../../../components/SectionHeader/SectionHeader";
 const PopularInstructors = () => {
   const [popularInstructors, setPopularInstructors] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/instructors?limit=6")
+    fetch("http://localhost:5000/courses")
       .then((res) => res.json())
       .then((data) => {
-        setPopularInstructors(data);
+        const sortedInstructors = data.sort((a, b) => b.total_enrolled_student - a.total_enrolled_student);
+        setPopularInstructors(sortedInstructors);
       });
   }, []);
   return (

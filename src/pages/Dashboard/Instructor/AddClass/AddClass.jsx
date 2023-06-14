@@ -1,9 +1,9 @@
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import useAuth from "../../../../hooks/useAuth";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
 import SectionHeader from "../../../../components/SectionHeader/SectionHeader";
 import { toast } from "react-hot-toast";
-import { useEffect } from "react";
 
 const img_hosting_token = import.meta.env.VITE_IMAGE_STORAGE_KEY;
 
@@ -12,20 +12,21 @@ const AddClass = () => {
   const { user } = useAuth();
   const { register, handleSubmit, reset, setValue } = useForm({
     defaultValues: {
-      instructor_name: user?.displayName || '',
-      instructor_email: user?.email || ''
-    }
+      instructor_name: user?.displayName || "",
+      instructor_email: user?.email || "",
+      instructor_photo: user?.photoURL || "",
+    },
   });
 
   useEffect(() => {
-    setValue('instructor_name', user?.displayName || '');
-    setValue('instructor_email', user?.email || '');
+    setValue("instructor_name", user?.displayName || "");
+    setValue("instructor_email", user?.email || "");
+    setValue("instructor_photo", user?.photoURL || "");
   }, [user, setValue]);
+
   const img_hosting_url = `https://api.imgbb.com/1/upload?key=${img_hosting_token}`;
- 
 
   const onSubmit = (data) => {
-    console.log('pppppppp', data)
     const formData = new FormData();
     formData.append("image", data.image[0]);
 
@@ -40,21 +41,22 @@ const AddClass = () => {
           const {
             instructor_name,
             instructor_email,
+            instructor_photo,
             class_name,
             available_seats,
             price,
           } = data;
           const newClass = {
             image: imgURL,
-            instructor_name: instructor_name,
-            instructor_email: instructor_email,
+            instructor_name,
+            instructor_email,
+            instructor_photo,
             class_name,
             available_seats: parseInt(available_seats),
             price: parseFloat(price),
           };
-          console.log(newClass);
+
           axiosSecure.post("/courses", newClass).then((data) => {
-            console.log("after posting new class", data.data);
             if (data.data.insertedId) {
               reset();
               toast.success("Successfully added, Please wait for approval");
@@ -89,7 +91,6 @@ const AddClass = () => {
             type="text"
             placeholder="Instructor Name"
             {...register("instructor_name")}
-            
             className="input input-bordered w-full"
             disabled
           />
@@ -102,8 +103,18 @@ const AddClass = () => {
             type="text"
             placeholder="Instructor Email"
             {...register("instructor_email")}
-           
             className="input input-bordered w-full"
+            disabled
+          />
+        </div>
+        <div className="form-control w-full my-4">
+          <label className="label">
+            <span className="label-text">Instructor Image</span>
+          </label>
+          <input
+            type="file"
+            {...register("instructor_photo")}
+            className="file-input file-input-bordered w-full"
             disabled
           />
         </div>

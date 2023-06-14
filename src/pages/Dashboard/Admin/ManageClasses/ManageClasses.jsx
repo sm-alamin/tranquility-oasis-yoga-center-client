@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { FaEdit } from 'react-icons/fa';
+import  { useState } from 'react';
+
 import SectionHeader from '../../../../components/SectionHeader/SectionHeader';
-import { Link } from 'react-router-dom';
 import useAxiosSecure from '../../../../hooks/useAxiosSecure';
 import useClasses from '../../../../hooks/useClasses';
 import Modal from 'react-modal';
@@ -63,8 +62,8 @@ const ManageClasses = () => {
 
   return (
     <div className="w-full">
-      <SectionHeader heading="Manage All Items" tagline="Do not panic, you can update your classes" />
-      <div className="overflow-x-auto w-full">
+      <SectionHeader heading="Manage All Classes" tagline="Hey, You have the power to manage classes"  />
+      <div className="overflow-x-auto w-full bg-slate-100">
         <table className="table w-full">
           <thead>
             <tr>

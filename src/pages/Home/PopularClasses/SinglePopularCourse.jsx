@@ -1,10 +1,10 @@
 import { Slide } from "react-awesome-reveal";
 const SinglePopularCourse = ({ course }) => {
-  const { _id, course_name, course_photo,instructor_name, number_of_enrolled_students } = course;
+  const { _id, course_name, image,instructor_name, total_enrolled_student } = course;
   return (
     <Slide><div className="max-w-sm rounded overflow-hidden shadow-lg bg-custom">
     <img
-      src={`https://source.unsplash.com/featured/?${course_photo}`}
+      src={image}
       alt="Course Photo"
       className="w-full h-48 object-cover"
     />
@@ -14,7 +14,7 @@ const SinglePopularCourse = ({ course }) => {
         <span className="font-bold text-indigo-600">Instructor:</span> {instructor_name}
       </p>
       <p className="text-gray-700 text-base">
-        <span className="font-bold text-indigo-600">Enrolled Students:</span> {number_of_enrolled_students}
+        <span className="font-bold text-indigo-600">Enrolled Students:</span> {total_enrolled_student}
       </p>
     </div>
   </div></Slide>

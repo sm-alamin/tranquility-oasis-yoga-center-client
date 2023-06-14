@@ -15,7 +15,7 @@ const SinglePopularInstructor = ({ instructor }) => {
             {instructor.instructor_name}
           </span>
           <span className="px-2 py-1 text-green-300 rounded-full text-xs">
-            {instructor.yoga_type}
+            {instructor.class_name}
           </span>
           </div>
         </div>
