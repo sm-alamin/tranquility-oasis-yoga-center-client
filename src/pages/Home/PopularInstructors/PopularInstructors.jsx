@@ -7,7 +7,7 @@ import SectionHeader from "../../../components/SectionHeader/SectionHeader";
 const PopularInstructors = () => {
   const [popularInstructors, setPopularInstructors] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/courses")
+    fetch("https://tranquility-oasis-yoga-center-server.vercel.app/courses")
       .then((res) => res.json())
       .then((data) => {
         const sortedInstructors = data.sort((a, b) => b.total_enrolled_student - a.total_enrolled_student);

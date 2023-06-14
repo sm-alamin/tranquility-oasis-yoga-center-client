@@ -6,7 +6,7 @@ import SingleInstructor from "./SingleInstructor";
 const AllInstructors = () => {
     const [instructors, setInstructors] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5000/courses")
+        fetch("https://tranquility-oasis-yoga-center-server.vercel.app/courses")
           .then((res) => res.json())
           .then((data) => {
             console.log(data)

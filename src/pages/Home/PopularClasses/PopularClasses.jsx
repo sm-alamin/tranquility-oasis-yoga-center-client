@@ -6,7 +6,7 @@ import SinglePopularCourse from "./SinglePopularCourse";
 const PopularClasses = () => {
   const [courses, setCourses] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/courses?limit=6")
+    fetch("https://tranquility-oasis-yoga-center-server.vercel.app/courses?limit=6")
       .then((res) => res.json())
       .then((data) => {
         setCourses(data);

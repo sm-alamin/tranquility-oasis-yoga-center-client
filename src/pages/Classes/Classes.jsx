@@ -3,10 +3,14 @@ import SectionHeader from "../../components/SectionHeader/SectionHeader";
 import useApprovedClasses from "../../hooks/useApprovedClasses";
 import SingleClass from "./SingleClass";
 import { useQueryClient } from "@tanstack/react-query";
+import useAdmin from "../../hooks/useAdmin";
+import useInstructor from "../../hooks/useInstructor";
 
 const Classes = () => {
   const [approvedCourses] = useApprovedClasses();
   const queryClient = useQueryClient();
+  const [isAdmin] =useAdmin();
+  const [isInstructor] =useInstructor();
 
   useEffect(() => {
     // Invalidate queries related to admin and instructor when they change
@@ -26,8 +30,8 @@ const Classes = () => {
           <SingleClass
             key={classItem._id}
             classItem={classItem}
-            isInstructor={false}
-            isAdmin={false}
+            isAdmin={isAdmin}
+            isInstructor={isInstructor}
           />
         ))}
       </div>
