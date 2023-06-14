@@ -57,7 +57,7 @@ const AddClass = () => {
             console.log("after posting new class", data.data);
             if (data.data.insertedId) {
               reset();
-              toast.success("Class is added successfully");
+              toast.success("Successfully added, Please wait for approval");
             }
           });
         }

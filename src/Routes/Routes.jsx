@@ -18,6 +18,8 @@ import ManageClasses from "../pages/Dashboard/Admin/ManageClasses/ManageClasses"
 import Payment from "../pages/Dashboard/Student/Payment/Payment";
 import ErrorPage from "../pages/Error/ErrorPage";
 import MyEnrolledClasses from "../pages/Dashboard/Student/MyEnrolledClasses/MyEnrolledClasses";
+import History from "../pages/Dashboard/Student/History/History";
+
 
 
 
@@ -67,6 +69,10 @@ const router = createBrowserRouter([
       {
         path: 'payment/:id', 
         element: <Payment/>,
+      },
+      {
+        path: 'history', 
+        element: <History/>,
       },
       {
         path: 'my-enrolled-classes', 

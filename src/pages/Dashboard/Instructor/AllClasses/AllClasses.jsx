@@ -1,13 +1,11 @@
-import { FaEdit, FaTrashAlt } from "react-icons/fa";
-import Swal from "sweetalert2";
+import { FaEdit } from "react-icons/fa";
 import useClasses from "../../../../hooks/useClasses";
-import useAxiosSecure from "../../../../hooks/useAxiosSecure";
 import SectionHeader from "../../../../components/SectionHeader/SectionHeader";
 import { Link } from "react-router-dom";
 
 const AllClasses = () => {
-  const [classes, , refetch] = useClasses();
-  const [axiosSecure] = useAxiosSecure();
+  const [classes ] = useClasses();
+ 
 
   return (
     <div className="w-full">
@@ -26,7 +24,9 @@ const AllClasses = () => {
               <th>Price</th>
               <th>Total Enrolled Students</th>
               <th>Status</th>
+              <th>Feedback</th>
               <th>Update</th>
+              
             </tr>
           </thead>
           <tbody>
@@ -51,8 +51,21 @@ const AllClasses = () => {
                   {class_item.number_of_enrolled_students}
                 </td>
                 <td>
-                  <button className="btn btn-warning btn-xs">Pending</button>
+                {class_item.status === "pending" ? (
+                    <button className="btn btn-warning btn-xs">
+                      {class_item.status}
+                    </button>
+                  ) : class_item.status === "denied" ? (
+                    <button className="btn btn-secondary btn-xs">
+                      {class_item.status}
+                    </button>
+                  ):(
+                    <button className="btn btn-success btn-xs">
+                      {class_item.status}
+                    </button>
+                    )}
                 </td>
+                <td>{class_item.feedback}</td>
                 <td>
                   <Link
                     to={`/dashboard/update-classes/${class_item._id}`}
@@ -61,6 +74,7 @@ const AllClasses = () => {
                     <FaEdit />
                   </Link>
                 </td>
+                
               </tr>
             ))}
           </tbody>

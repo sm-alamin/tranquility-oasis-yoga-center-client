@@ -1,7 +1,8 @@
 
+
 import useEnrolledClasses from "../../../../hooks/useEnrolledClasses";
 
-const MyEnrolledClasses = () => {
+const History = () => {
  const [enrolledCart] = useEnrolledClasses();
   return (
     <div className="w-full">
@@ -14,6 +15,7 @@ const MyEnrolledClasses = () => {
               <th>#</th>
               <th>Class Photo</th>
               <th>Class Name</th>
+              <th>Transaction Id</th>
             </tr>
           </thead>
           <tbody>
@@ -31,6 +33,7 @@ const MyEnrolledClasses = () => {
                   </div>
                 </td>
                 <td>{item.class_name}</td>
+                <td>{item.transactionId}</td>
               </tr>
             ))}
           </tbody>
@@ -40,4 +43,4 @@ const MyEnrolledClasses = () => {
   );
 };
 
-export default MyEnrolledClasses;
+export default History;

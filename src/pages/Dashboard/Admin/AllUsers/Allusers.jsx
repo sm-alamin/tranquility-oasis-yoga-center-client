@@ -38,7 +38,19 @@ const AllUsers = () => {
       });
   };
 
-  const handleDelete = (user) => {};
+  const handleDelete = (user) => {
+    fetch(`http://localhost:5000/users/${user._id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.deletedCount) {
+          refetch();
+          toast.success(`${user.name} has been deleted!`);
+        }
+      });
+  };
 
   return (
     <div className="w-full">

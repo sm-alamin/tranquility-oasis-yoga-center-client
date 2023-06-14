@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 
-const useClasses = () => {
+const useApprovedClasses = () => {
   const { data: courses = [], isLoading: loading, refetch } = useQuery({
     queryKey: ["courses"],
     queryFn: async () => {
@@ -9,7 +9,9 @@ const useClasses = () => {
     },
   });
 
-  return [courses, loading, refetch];
+  const approvedCourses = courses.filter((course) => course.status === "approved");
+
+  return [approvedCourses, loading, refetch];
 };
 
-export default useClasses;
+export default useApprovedClasses;

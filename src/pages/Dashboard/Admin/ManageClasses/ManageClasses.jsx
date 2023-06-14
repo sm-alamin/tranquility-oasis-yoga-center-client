@@ -1,38 +1,41 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { FaEdit } from 'react-icons/fa';
 import SectionHeader from '../../../../components/SectionHeader/SectionHeader';
 import { Link } from 'react-router-dom';
-import useClasses from '../../../../hooks/useClasses';
 import useAxiosSecure from '../../../../hooks/useAxiosSecure';
+import useClasses from '../../../../hooks/useClasses';
+import Modal from 'react-modal';
+Modal.setAppElement('#root');
 
 const ManageClasses = () => {
   const [courses, loading, refetch] = useClasses();
   const [axiosSecure] = useAxiosSecure();
-  const [feedbackModalOpen, setFeedbackModalOpen] = useState(false);
   const [selectedClass, setSelectedClass] = useState(null);
   const [feedbackMessage, setFeedbackMessage] = useState('');
+  const [feedbackModalOpen, setFeedbackModalOpen] = useState(false);
   const [feedbackButtonDisabled, setFeedbackButtonDisabled] = useState(true);
   const [approveButtonDisabled, setApproveButtonDisabled] = useState(false);
   const [denyButtonDisabled, setDenyButtonDisabled] = useState(false);
 
   const handleApprove = async (classId) => {
     try {
-      await axiosSecure.patch(`/courses/${classId}`, { status: 'approved' });
+      await axiosSecure.patch(`/courses/${classId}`, { operation: 'approve' });
       refetch();
-      setApproveButtonDisabled(true); // Disable the Approve button after approving
-      setDenyButtonDisabled(true); // Disable the Deny button after approving
+      setApproveButtonDisabled(true);
+      setDenyButtonDisabled(true);
+      setFeedbackButtonDisabled(true);
     } catch (error) {
-      console.error('Failed to update class status:', error);
+      console.error('Failed to update class:', error);
     }
   };
 
   const handleDeny = async (classId) => {
     try {
-      await axiosSecure.patch(`/courses/${classId}`, { status: 'denied' });
+      await axiosSecure.patch(`/courses/${classId}`, { operation: 'deny' });
       refetch();
-      setFeedbackButtonDisabled(false); // Enable the Feedback button when denied
-      setApproveButtonDisabled(true); // Disable the Approve button when denied
-      setDenyButtonDisabled(true); // Disable the Deny button when denied
+      setFeedbackButtonDisabled(false);
+      setApproveButtonDisabled(true);
+      setDenyButtonDisabled(true);
     } catch (error) {
       console.error('Failed to update class status:', error);
     }
@@ -60,13 +63,9 @@ const ManageClasses = () => {
 
   return (
     <div className="w-full">
-      <SectionHeader
-        heading="Manage All Items"
-        tagline="Do not panic, you can update your classes"
-      />
+      <SectionHeader heading="Manage All Items" tagline="Do not panic, you can update your classes" />
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
-          {/* head */}
           <thead>
             <tr>
               <th>#</th>
@@ -144,34 +143,30 @@ const ManageClasses = () => {
           </tbody>
         </table>
       </div>
+     
 
-      {/* Feedback Modal */}
-      {feedbackModalOpen && (
-        <div className="modal">
-          <div className="modal-content">
-            <h2>Send Feedback</h2>
-            <p>Class: {selectedClass && selectedClass.class_name}</p>
-            <textarea
-              value={feedbackMessage}
-              onChange={(e) => setFeedbackMessage(e.target.value)}
-              placeholder="Write your feedback..."
-            ></textarea>
-            <div className="modal-buttons">
-              <button className="btn" onClick={handleCloseFeedbackModal}>
-                Cancel
-              </button>
-              {selectedClass && (
-                <button className="btn btn-accent" onClick={handleSubmitFeedback}>
-                  Send Feedback
-                </button>
-              )}
-            </div>
-          </div>
+      {/* Feedback modal */}
+      <Modal isOpen={feedbackModalOpen} onRequestClose={handleCloseFeedbackModal}>
+        <h2>Send Feedback</h2>
+        <p>Class: {selectedClass && selectedClass.class_name}</p>
+        <textarea
+          value={feedbackMessage}
+          onChange={(e) => setFeedbackMessage(e.target.value)}
+          placeholder="Write your feedback..."
+        ></textarea>
+        <div className="modal-buttons">
+          <button className="btn" onClick={handleCloseFeedbackModal}>
+            Cancel
+          </button>
+          {selectedClass && (
+            <button className="btn btn-accent" onClick={handleSubmitFeedback}>
+              Send Feedback
+            </button>
+          )}
         </div>
-      )}
+      </Modal>
     </div>
   );
 };
 
 export default ManageClasses;
-

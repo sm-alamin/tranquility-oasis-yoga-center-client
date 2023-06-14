@@ -11,14 +11,14 @@ const Payment = () => {
     const {id} = useParams();
     console.log(id);
     const [cart] = useCart();
-    const totalPrice = cart.find(item => item._id === id)?.price;
-    console.log('price will be', totalPrice)
+    const newCart = cart.find(item => item._id === id);
+    console.log('price will be', newCart)
     return (
         <div>
             <SectionHeader heading="Please! Payment" tagline='Only limited seat available'/>
            
             <Elements stripe={stripePromise}>
-                <CheckoutForm cart={cart} price={totalPrice}></CheckoutForm>
+                <CheckoutForm newCart={newCart} price ={newCart.price}></CheckoutForm>
             </Elements>
         </div>
     );

@@ -4,7 +4,9 @@ import './CheckoutForm.css'
 import useAuth from "../../../../hooks/useAuth";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
 
-const CheckoutForm = ({ cart, price }) => {
+const CheckoutForm = ({ newCart, price }) => {
+    console.log(newCart)
+    console.log(price)
     const stripe = useStripe();
     const elements = useElements();
     const { user } = useAuth();
@@ -77,13 +79,13 @@ const CheckoutForm = ({ cart, price }) => {
                 transactionId: paymentIntent.id,
                 price,
                 date: new Date(),
-                quantity: cart.length,
-                cartItems: cart.map(item => item._id),
-                classItems: cart.map(item => item.classItemId),
+                quantity: newCart.length,
+                cartItem: newCart._id,
+                classItemId: newCart.classItemId,
                 status: 'service pending',
-                class_name: cart.map(item => item.class_name),
-                image: cart.map(item => item.image),
-                instructor_name: cart.map(item => item.instructor_name)
+                class_name: newCart.class_name,
+                image: newCart.image,
+                instructor_name: newCart.instructor_name,
             };
             axiosSecure.post('/payments', payment)
                 .then(res => {
